@@ -1,0 +1,33 @@
+os:
+- linux
+language: cpp
+
+sudo: false
+
+addons:
+  apt:
+    sources:
+      - ubuntu-toolchain-r-test
+      - kalakris-cmake
+      - boost-latest
+    packages:
+      - gcc-4.9
+      - g++-4.9
+      - cmake
+      - libboost1.58-all-dev
+
+script:
+  - source build.sh
+
+before_deploy:
+  - source deploy-prepare.sh
+
+deploy:
+  provider: releases
+  api_key:
+    secure: McOTtDed2tmJ6K8AEVHGDxWioQj3QQFfxYbv4mC5TWNKvnPjE2dHscUBfEhF6kNGGTFHCUD/oLl+xE92tvWR1Lrb8orGgnUFA/RDwKL/P69u9R0K4PnJ+KyI40svGtKrP0B3+v07xa337HHxym+Bbvgw5aKScn21Y1w99xLLgEvRhOqd4Hs1rXBx95jWfHRWnaoTxCK7dH6tDP4suRYMWyfiw4Y6zkVfrR/MfazNuixkoCOwQNMaVxmqM1cKfwfpvhxIHbtP4uVuf7gr99e7clRaFV27f4sjG0NlTKYaFIbe8u3I0ng5M2V7LqwKfbDa8GTJWZRfLcKMR7vy4SNTlnqHbNOyIFYoVZMr2vM1lqqp3eZqRiLMRCoHoEJVGddtbnS+PgVtK3915UOd1awfhKDwkJQbkvrYwTjT/TNPPpy53nlXKoRdzc2HyAamikMbIQVGPwuntpCritPGrUuhyyYIMxREHOnarI8IOxVp3hDnvGwCTAB7W9TC1tn+BBM6wT5634R5AMZ3j9yJugV1HTcZJs/Ke3M+Nuec1X8DBlpzMlzStiZJ1Wcn492x3Mu1GsQ/u9l+xhXr9eyzLUd+gwBXMDGPEbfWU+9wTdOw46KsHQqY8ReYHimlMRxjDeGIw7dVSNn7JShGKB17rpU/cu6zD6/YAOr93K4y4Per53A=
+  file: $RELEASE_FILENAME
+  skip_cleanup: true
+  on:
+    tags: true
+    repo: cpp3ds/3ds-tools
