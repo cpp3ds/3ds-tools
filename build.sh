@@ -4,7 +4,7 @@ set -ex
 export CC=gcc-4.9
 export CXX=g++-4.9
 
-export OUTDIR=3ds-tools
+export OUTDIR=${HOME}/3ds-tools
 mkdir $OUTDIR
 
 # Build makerom (commit 80d3d99)

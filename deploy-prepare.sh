@@ -2,4 +2,5 @@
 set -ex
 
 export RELEASE_FILENAME=3ds-tools-$TRAVIS_OS_NAME-$TRAVIS_TAG.tar.xz
-tar -cJvf $RELEASE_FILENAME $OUTDIR
+cd ${HOME}
+tar -cJvf $RELEASE_FILENAME 3ds-tools
