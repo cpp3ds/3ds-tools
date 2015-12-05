@@ -10,6 +10,6 @@ Tools currently included:
 
 - [bannertool](https://github.com/Steveice10/bannertool)
 
-- [nihstro](https://github.com/neobrain/nihstro)
+- [nihstro](https://github.com/neobrain/nihstro) (nihstro-assemble & nihstro-disassemble)
 
 - [3dsxtool](https://github.com/devkitPro/3dstools)
