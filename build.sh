@@ -11,7 +11,7 @@ tar xaf boost-libs.tar.xz
 
 # Build nihstro
 git clone https://github.com/neobrain/nihstro.git
-cd nihstro && cmake -DBoost_USE_STATIC_LIBS=ON -DBOOST_LIBRARYDIR=$TRAVIS_BUILD_DIR/boost-libs . && make -j4 && cd -
+cd nihstro && cmake -DBoost_USE_STATIC_LIBS=ON -DBOOST_LIBRARYDIR=$TRAVIS_BUILD_DIR/boost-libs . && make -j4 nihstro-assemble && make -j4 nihstro-disassemble && cd -
 
 # Build makerom (commit 80d3d99)
 git clone https://github.com/profi200/Project_CTR.git

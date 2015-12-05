@@ -1,7 +1,7 @@
 #!/bin/sh
 set -ex
 
-export RELEASE_FILENAME=3ds-tools-$TRAVIS_OS_NAME-$TRAVIS_TAG.tar.xz
+export RELEASE_FILENAME=3ds-tools-$TRAVIS_OS_NAME-$TRAVIS_TAG.tar.gz
 OUTDIR=${HOME}/3ds-tools
 mkdir $OUTDIR
 
@@ -12,4 +12,4 @@ cp nihstro/nihstro-assemble $OUTDIR
 cp nihstro/nihstro-disassemble $OUTDIR
 
 cd ${HOME}
-tar -cJvf $RELEASE_FILENAME 3ds-tools
+tar -czvf $RELEASE_FILENAME 3ds-tools
