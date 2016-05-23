@@ -7,7 +7,7 @@ mkdir $OUTDIR
 
 cp Project_CTR/makerom/makerom $OUTDIR
 cp 3dstools/3dsxtool $OUTDIR
-cp bannertool/bannertool $OUTDIR
+cp bannertool/output/bannertool $OUTDIR
 cp nihstro/nihstro-assemble $OUTDIR
 cp nihstro/nihstro-disassemble $OUTDIR
 
